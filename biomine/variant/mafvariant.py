@@ -306,10 +306,11 @@ class mafvariant(variant):
 			elif unknown:
 				pass
 			else:
-				print "biomine::variant::mafvariant Warning: could not find amino acid change or intronic change"
-				print "  Hint: Is the input amino acid change column correct?"
-				print "    Problem variant: " ,
-				print( self.proteogenomicVar() + "  --  " + hgvsp )
+				pass
+				#print "biomine::variant::mafvariant Warning: could not find amino acid change or intronic change"
+				#print "  Hint: Is the input amino acid change column correct?"
+				#print "    Problem variant: " ,
+				#print( self.proteogenomicVar() + "  --  " + hgvsp )
 		else:
 			parts = hgvsp.split('\.')
 			pos = parts[-1]
@@ -324,7 +325,8 @@ class mafvariant(variant):
 		if ( lowPep in mafvariant.varSymbols ):
 			return mafvariant.varSymbols[lowPep]
 		if ( pep not in mafvariant.toLong and pep not in mafvariant.revVarSymbols ):
-			print( "biomine warning: " + str( pep ) + " not found in conversion tables" )
+			pass
+			#print( "biomine warning: " + str( pep ) + " not found in conversion tables" )
 		return pep
 	def hgvspIsNonCoding( self , hgvsp ):
 #		print "biomine::variant::mafvariant::hgvspIsNonCoding - " ,
