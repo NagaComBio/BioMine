@@ -111,6 +111,8 @@ class vepconsequencevariant(mafvariant):
 		#self.protein = kwargs.get( 'protein' , None )
 		self.transcriptsRefSeq = kwargs.get('transcriptsRefSeq',[])
 		aParentVariant = kwargs.get( 'parentVariant' , None )
+		self.hgvsc_vep = kwargs.get('hgvsc_vep', None) # hgvsc directly from VEP
+		self.hgvsp_vep = kwargs.get('hgvsp_vep', None) # hgvsp directly from VEP
 		if aParentVariant:
 			super( vepconsequencevariant , self ).copyInfo( aParentVariant )
 
